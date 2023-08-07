@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Overpass+Mono&family=Prompt&display=swap');
+
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Verydarkblue: hsl(217, 54%, 11%);
+  --Verydarkblue-card: hsl(216, 50%, 16%);
+  --Verydarkblue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --ff: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Verydarkblue);
+  font-family: var(--ff);
+}
+
+.card {
+  display: grid;
+  background-color: var(--Verydarkblue-card);
+  max-width: 23.875rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  font-family: var(--ff);
+  box-shadow: 0px 30px 30px 30px hsl(216, 57%, 9%);
+  line-height: 1.5;
+  gap: 1rem;
+}
+
+.card__image__container--1 {
+  position: relative;
+  display: inline-block;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 0.8rem;
+  display: block;
+}
+
+.card__image--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card__image__container--1:hover .card__image--overlay {
+  opacity: 1;
+}
+
+.card__image__container--1:hover .card__eye__icon {
+  opacity: 1;
+  z-index: 1;
+}
+
+.card__title {
+  color: var(--White);
+  font-weight: 600;
+}
+
+.card__title:hover {
+  color: var(--Cyan);
+  cursor: grab;
+}
+
+.card__text {
+  font-weight: 300;
+  color: var(--Softblue);
+}
+
+.card__image__container--2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__container--eth {
+  display: flex;
+  flex-direction: row;
+  gap: 1ch;
+}
+
+.card__container--clock {
+  display: flex;
+  gap: 1ch;
+}
+
+.card__eth {
+  color: var(--Cyan);
+}
+
+.card__day {
+  color: var(--Softblue);
+}
+
+.clock,
+.eth-sym {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card__line {
+  background-color: var(--Verydarkblue-line);
+  border: none;
+  height: 0.1rem;
+}
+
+.card__creator--container {
+  color: var(--Softblue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+  gap: 1.5ch;
+  align-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.card__image--avatar {
+  align-self: center;
+  border: solid white 2px;
+  border-radius: 50px;
+  width: 12%;
+  margin-right: 10px;
+}
+
+.card__creator--description {
+  display: flex;
+  justify-content: center;
+}
+
+.jules-w {
+  color: var(--White);
+}
+
+.jules-w:hover {
+  color: var(--Cyan);
+}
+
+.attribution {
+  margin-top: 0.5rem;
+  color: var(--White);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
